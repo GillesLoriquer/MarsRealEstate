@@ -75,3 +75,6 @@ ext {
 
 * Glide
     * com.github.bumptech.glide:glide:$version_glide
+    
+## Captures d'écran
+<img src="./screenshots/MarsRealEstate1.png" width="200"> <img src="./screenshots/MarsRealEstate2.png" width="200"> <img src="./screenshots/MarsRealEstate3.png" width="200">
