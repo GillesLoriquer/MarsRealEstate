@@ -1,55 +1,77 @@
-MarsRealEstate - Starter Code
-==============================
+# MarsRealEstate
 
-Starter code for Android Kotlin Fundamentals Codelab 8.1 Getting data from the internet
+Application simulant la location et l'achat de parcelles de Mars. Il s'agit de la mise en pratique de la lesson 8 [Connect to the Internet](https://classroom.udacity.com/courses/ud9012) de Google (Udacity)
 
-Introduction
-------------
+## Concepts mis en oeuvre
 
-MarsRealEstate is a demo app that shows available properties for sale and for rent on Mars.
-The property data is stored on a Web server as a REST web service.  This app demonstrated
-the use of [Retrofit](https://square.github.io/retrofit/) to make REST requests to the 
-web service, [Moshi](https://github.com/square/moshi) to handle the deserialization of the 
-returned JSON to Kotlin data objects, and [Glide](https://bumptech.github.io/glide/) to load and 
-cache images by URL.  
+* Appels REST avec Retrofit
+* Moshi pour la désérialisation JSON
+* Glide pour le chargement et le cache des images
+* ViewModel
+* LiveData
+* Databinding avec binding adapters
+* Navigation avec les SafeArgs
 
-The app also leverages [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel),
-[LiveData](https://developer.android.com/topic/libraries/architecture/livedata), 
-[Data Binding](https://developer.android.com/topic/libraries/data-binding/) with binding 
-adapters, and [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/) 
-with the SafeArgs plugin for parameter passing between fragments.
+## Prérequis
 
-Pre-requisites
---------------
+* Android Studio
 
-You need to know:
-- How to create and use fragments.
-- How to navigate between fragments, and use safeArgs to pass data between fragments.
-- How to use architecture components including ViewModel, ViewModelProvider.Factory, LiveData, and LiveData transformations.
-- How to use coroutines for long-running tasks.
+## Installation
 
+Télécharger le .zip du projet, extraire le contenu dans le répertoire de votre choix et ouvrir ce répertoire dans Android Studio.
 
-Getting Started
----------------
+## Version SDK
 
-1. Download and run the app.
+* minSdkVersion 19
+* targetSdkVersion 28
 
-License
--------
+## Dépendances
 
-Copyright 2019 Google, Inc.
+```
+ext {
+    version_android_gradle_plugin = "3.3.2"
+    version_core = "1.0.1"
+    version_constraint_layout = "1.1.3"
+    version_glide = "4.8.0"
+    version_kotlin = "1.3.21"
+    version_kotlin_coroutines = "1.1.0"
+    version_lifecycle_extensions = "2.0.0"
+    version_moshi = "1.8.0"
+    version_navigation = "1.0.0"
+    version_retrofit = "2.5.0"
+    version_retrofit_coroutines_adapter = "0.9.2"
+    version_recyclerview = "1.0.0"
+}
+```
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
+* Kotlin
+    * org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin
 
-  http://www.apache.org/licenses/LICENSE-2.0
+* Constraint Layout
+    * androidx.constraintlayout:constraintlayout:$version_constraint_layout
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+* ViewModel and LiveData
+    * androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions
+
+* Navigation
+    * android.arch.navigation:navigation-fragment-ktx:$version_navigation
+    * android.arch.navigation:navigation-ui-ktx:$version_navigation
+
+* Core with Ktx
+    * androidx.core:core-ktx:$version_core
+
+* Retrofit
+    * com.squareup.retrofit2:retrofit:$version_retrofit
+    * com.squareup.retrofit2:converter-moshi:$version_retrofit
+    * com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter
+
+* Moshi (JSON Parser)
+    * com.squareup.moshi:moshi:$version_moshi
+    * com.squareup.moshi:moshi-kotlin:$version_moshi
+
+* Corountine
+    * org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines
+    * org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines
+
+* Glide
+    * com.github.bumptech.glide:glide:$version_glide
